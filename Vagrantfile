@@ -31,7 +31,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Customize virtual machine.
   config.vm.provider "virtualbox" do |vb|
     vb.customize ["modifyvm", :id, "--memory", "8192"]
-    vb.customize ["modifyvm", :id, "--name", "moodle-dev"]
+    vb.customize ["modifyvm", :id, "--name", "moodle-dev-example"]
   end
 
   # Start Selenium for Behat.
