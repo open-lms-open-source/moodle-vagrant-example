@@ -1,0 +1,5 @@
+.vagrant
+/moodledata/*
+!/moodledata/.gitkeep
+/www/*
+!/www/.gitkeep
