@@ -93,7 +93,7 @@ Lastly, if you ever need to start fresh, you can delete your virtual machine, bu
 doing so, backup any data that is in the box.  Most importantly, your MySQL databases:
 
     > vagrant ssh
-    > mysqldump -u root -p -h 127.0.0.1 --databases database1 database2 database3 > /vagrant/mysql.bak.sql
+    > mysqldump -u root -p --databases database1 database2 database3 > /vagrant/mysql.bak.sql
     Enter password: [Type in root]
 
 Replace `database1 database2 database3` with a list of databases you wish to backup.  In addition
@@ -107,7 +107,7 @@ Lastly, you can re-create the virtual machine and restore your databases:
 
     > vagrant up
     > vagrant ssh
-    > mysql -u root -p -h 127.0.0.1 < /vagrant/mysql.bak.sql
+    > mysql -u root -p < /vagrant/mysql.bak.sql
     Enter password: [Type in root]
 
 How to connect to MySQL
@@ -122,7 +122,7 @@ From your host machine with an application like [Sequel Pro](http://sequelpro.co
 From within the virtual machine:
 
     > vagrant ssh
-    > mysql -u root -p -h 127.0.0.1
+    > mysql -u root -p
     Enter password: [Type in root]
 
 How to create databases
