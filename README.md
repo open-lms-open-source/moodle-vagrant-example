@@ -34,7 +34,7 @@ Vagrant install
 To install and use this project:
 
 1. Clone this project: `git clone https://github.com/moodlerooms/moodle-vagrant-example.git ~/vagrant`
-2. Install recommended versions of Vagrant and VirtualBox for the [latest box release on Atlas](https://atlas.hashicorp.com/moodlerooms/boxes/ubuntu-16.04-moodle-dev).
+2. Install recommended versions of Vagrant and VirtualBox for the [latest box release on Vagrant Cloud](https://app.vagrantup.com/moodlerooms/boxes/ubuntu-16.04-moodle-dev).
 3. Install Vagrant Host Manager Plugin: `vagrant plugin install vagrant-hostmanager`
 4. Open your terminal and from within this project, run: `vagrant up`
 
@@ -203,26 +203,12 @@ First, you must update your config file with the following:
     // $CFG->behat_faildump_path = '/vagrant/www/behat_screenshots'; // Uncomment for screenshots.
     $CFG->behat_profiles      = [
         'default' => [
-            'browser'    => 'chrome',
-            'wd_host'    => 'http://localhost:4444/wd/hub',
-            'extensions' => [
-                'Behat\MinkExtension' => [
-                    'selenium2' => [
-                        'browser' => 'chrome',
-                    ]
-                ]
-            ]
+            'browser' => 'chrome',
+            'wd_host' => 'http://localhost:4444/wd/hub',
         ],
         'firefox' => [
-            'browser'    => 'firefox',
-            'wd_host'    => 'http://localhost:4444/wd/hub',
-            'extensions' => [
-                'Behat\MinkExtension' => [
-                    'selenium2' => [
-                        'browser' => 'firefox',
-                    ]
-                ]
-            ]
+            'browser' => 'firefox',
+            'wd_host' => 'http://localhost:4444/wd/hub',
         ]
     ];
 
@@ -282,17 +268,17 @@ Vagrant share
 =============
 
 Use this feature to access your virtual machine from any other device, including other
-virtual machines.
+virtual machines.  See [help document](https://www.vagrantup.com/docs/share/) for more
+details.
 
 **Warning:** this makes your virtual machine available to the public, but they of course
 need to know the exact details to actually connect.  These shares should only last
 for around eight hours and expire whenever you kill the `vagrant share`
 command.
 
-1. Create an account on [Atlas](https://atlas.hashicorp.com/account/new).
-2. Follow the steps on [how to create a share](https://atlas.hashicorp.com/help/vagrant/shares).
-3. Once you get your `SOMETHING.vagrantshare.com` URL, you must edit your config
-   file and update the `$CFG->wwwroot = 'http://SOMETHING.vagrantshare.com';`
+1. To start sharing, use `vagrant share`
+2. The above command will output a URL, you must edit your config
+   file and update the `$CFG->wwwroot` with the URL.
 
 To stop Vagrant share, just go to the terminal window where you started
 it and hit `control+c` to exit the command.  Don't forget to revert your
