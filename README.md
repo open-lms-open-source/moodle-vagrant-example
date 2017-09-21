@@ -192,6 +192,18 @@ To profile a page, do the following:
 3. The profiles are stored in the `/srv/xdebug-profiles` directory in the virtual machine.
 4. Visit [webgrind.dev](http://webgrind.dev) to view and delete profiles.
 
+How to use MailHog
+==================
+
+If you would like to use [MailHog](https://github.com/mailhog/MailHog) then follow these steps:
+
+1. Edit your config file.
+2. Comment out the `$CFG->noemailever` line.
+3. Ensure you have this config: `$CFG->smtphosts = '0.0.0.0:1025';`
+4. Purge caches.
+
+MailHog will now capture any emails sent from Moodle and is available on port `8025`, EG: http://moodle.dev:8025
+
 How to run Behat
 ================
 
