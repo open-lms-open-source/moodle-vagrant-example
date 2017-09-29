@@ -33,7 +33,4 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.customize ["modifyvm", :id, "--memory", "8192"]
     vb.customize ["modifyvm", :id, "--name", "moodle-dev-example"]
   end
-
-  # Start Selenium for Behat.
-  config.vm.provision "shell", privileged: false, inline: "/bin/sh /usr/local/bin/behat-servers-start", run: "always"
 end
