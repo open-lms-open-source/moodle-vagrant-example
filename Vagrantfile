@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Host manager plugin settings.  This updates /etc/hosts on guest and host.
   config.hostmanager.enabled = true
   config.hostmanager.manage_host = true
-  config.hostmanager.aliases = %w(moodle.dev core-moodle.dev webgrind.dev)
+  config.hostmanager.aliases = %w(moodle.test core-moodle.test webgrind.test)
 
   # Forward port for MySQL.
   config.vm.network "forwarded_port", guest: 3306, host: 3306

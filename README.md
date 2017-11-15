@@ -168,11 +168,11 @@ First, clone the Moodle repository into `www/moodle` directory.
 Next, create a database and data directory for the site.  Follow
 the steps in above sections to do this.
 
-Lastly, go to [moodle.dev](http://moodle.dev) in your browser and
+Lastly, go to [moodle.test](http://moodle.test) in your browser and
 follow the instructions to install Moodle.
 
 Note: you can install a second Moodle site into `www/core-moodle`
-and access it via [core-moodle.dev](http://core-moodle.dev). For example,
+and access it via [core-moodle.test](http://core-moodle.test). For example,
 you may want to install your customized version of Moodle in `www/moodle`
 and install the core version of Moodle in `www/core-moodle`.
 
@@ -190,7 +190,7 @@ To profile a page, do the following:
 1. Add XDEBUG_PROFILE=1 to your URL.
 2. Refresh/rerun the page to generate the profile.
 3. The profiles are stored in the `/srv/xdebug-profiles` directory in the virtual machine.
-4. Visit [webgrind.dev](http://webgrind.dev) to view and delete profiles.
+4. Visit [webgrind.test](http://webgrind.test) to view and delete profiles.
 
 How to use MailHog
 ==================
@@ -202,7 +202,7 @@ If you would like to use [MailHog](https://github.com/mailhog/MailHog) then foll
 3. Ensure you have this config: `$CFG->smtphosts = '0.0.0.0:1025';`
 4. Purge caches.
 
-MailHog will now capture any emails sent from Moodle and is available on port `8025`, EG: http://moodle.dev:8025
+MailHog will now capture any emails sent from Moodle and is available on port `8025`, EG: http://moodle.test:8025
 
 How to run Behat
 ================
