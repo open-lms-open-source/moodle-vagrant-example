@@ -1,20 +1,20 @@
 Introduction
 ============
 
-This project serves as an example of how to use the [Moodlerooms development box](https://atlas.hashicorp.com/moodlerooms/boxes/ubuntu-16.04-moodle-dev)
+This project serves as an example of how to use the [Blackboard Open LMS development box](https://atlas.hashicorp.com/blackboard-open-source/boxes/ubuntu-16.04-moodle-dev)
 that is published to Atlas.  While you can use this project directly, it is meant as a starting
-point for your own `Vagrantfile` where you can customize the Moodlerooms development box
+point for your own `Vagrantfile` where you can customize the Blackboard Open LMS development box
 using [Vagrant provisioning](https://www.vagrantup.com/docs/provisioning/).  So, forking of this project
 for customization is encouraged.
 
 This project does not attempt to provide the ideal development environment for every Moodle developer.
-The Moodlerooms team simply wants to share their development box and provide some documentation on how
+The Blackboard Open LMS team simply wants to share their development box and provide some documentation on how
 to use it.  So, please keep that in mind when filing issues and pull requests.
 
 Overview of the box
 ===================
 
-The Moodlerooms development box has the following technologies installed:
+The Blackboard Open LMS development box has the following technologies installed:
 
 * Ubuntu is the operating system
 * Nginx with PHP-FPM
@@ -26,15 +26,15 @@ The Moodlerooms development box has the following technologies installed:
 * Selenium for Behat
 * And other various tools required by Moodle.
 
-For the adventurous, you can explore the details of the box creation process in [this project](https://github.com/moodlerooms/moodle-vagrant-box).
+For the adventurous, you can explore the details of the box creation process in [this project](https://github.com/blackboard-open-source/moodle-vagrant-box).
 
 Vagrant install
 ===============
 
 To install and use this project:
 
-1. Clone this project: `git clone https://github.com/moodlerooms/moodle-vagrant-example.git ~/vagrant`
-2. Install recommended versions of Vagrant and VirtualBox for the [latest box release on Vagrant Cloud](https://app.vagrantup.com/moodlerooms/boxes/ubuntu-16.04-moodle-dev).
+1. Clone this project: `git clone https://github.com/blackboard-open-source/moodle-vagrant-example.git ~/vagrant`
+2. Install recommended versions of Vagrant and VirtualBox for the [latest box release on Vagrant Cloud](https://app.vagrantup.com/blackboard-open-source/boxes/ubuntu-16.04-moodle-dev).
 3. Install Vagrant Host Manager Plugin: `vagrant plugin install vagrant-hostmanager`
 4. Open your terminal and from within this project, run: `vagrant up`
 
