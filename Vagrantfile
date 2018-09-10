@@ -6,7 +6,7 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Latest Ubuntu 16.04 box.
-  config.vm.box = "moodlerooms/ubuntu-16.04-moodle-dev"
+  config.vm.box = "blackboard-open-source/ubuntu-16.04-moodle-dev"
 
   # Host manager plugin settings.  This updates /etc/hosts on guest and host.
   config.hostmanager.enabled = true
