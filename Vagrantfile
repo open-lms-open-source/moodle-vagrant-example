@@ -5,8 +5,8 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  # Latest Ubuntu 16.04 box.
-  config.vm.box = "blackboard-open-source/ubuntu-16.04-moodle-dev"
+  # Latest Ubuntu 18.04 box.
+  config.vm.box = "open-lms-open-source/ubuntu-18.04-moodle-dev"
 
   # Host manager plugin settings.  This updates /etc/hosts on guest and host.
   config.hostmanager.enabled = true
@@ -30,7 +30,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Customize virtual machine.
   config.vm.provider "virtualbox" do |vb|
-    vb.customize ["modifyvm", :id, "--memory", "8192"]
+    vb.customize ["modifyvm", :id, "--memory", "4096"]
     vb.customize ["modifyvm", :id, "--name", "moodle-dev-example"]
+    vb.cpus = 2
   end
 end
