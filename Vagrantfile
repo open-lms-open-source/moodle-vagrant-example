@@ -7,6 +7,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Latest Ubuntu 18.04 box.
   config.vm.box = "open-lms-open-source/ubuntu-18.04-moodle-dev"
+  config.vm.box_version = "2.0.0"
 
   # Host manager plugin settings.  This updates /etc/hosts on guest and host.
   config.hostmanager.enabled = true
